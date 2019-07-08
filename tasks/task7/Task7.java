@@ -12,10 +12,10 @@ import java.util.Random;
 public class Task7 {
 
     public static int method(double speed) throws IOException{
-        //Текущая дата:
+        //РўРµРєСѓС‰Р°СЏ РґР°С‚Р°:
         Random random = new Random();
         Calendar today = GregorianCalendar.getInstance();
-        int year = 2000+random.nextInt(20);//с 2000 года;
+        int year = 2000+random.nextInt(20);//СЃ 2000 РіРѕРґР°;
         int mon = random.nextInt(12);
         int day;
         if(mon == 1 &&  isLeapYear(year)) day = random.nextInt(29)+1;
@@ -23,18 +23,18 @@ public class Task7 {
         else day = random.nextInt(30)+1;
         today.set(year, mon, day);
         DateFormat format = new SimpleDateFormat("dd MM yyyy");
-        System.out.println("Сегодня " + format.format(today.getTime()));
-        //День рождения:
+        System.out.println("РЎРµРіРѕРґРЅСЏ " + format.format(today.getTime()));
+        //Р”РµРЅСЊ СЂРѕР¶РґРµРЅРёСЏ:
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Дата рождения (день месяц год через пробел):");
+        System.out.println("Р”Р°С‚Р° СЂРѕР¶РґРµРЅРёСЏ (РґРµРЅСЊ РјРµСЃСЏС† РіРѕРґ С‡РµСЂРµР· РїСЂРѕР±РµР»):");
         String[] string = reader.readLine().split(" ");
         Calendar birthday = GregorianCalendar.getInstance();
         birthday.set(Integer.parseInt(string[2]), Integer.parseInt(string[1]) - 1, Integer.parseInt(string[0]));
         reader.close();
-        //Скорости
+        //РЎРєРѕСЂРѕСЃС‚Рё
         double one = 60;
         double two = 80;
-        if(today.get(Calendar.DAY_OF_MONTH)==birthday.get(Calendar.DAY_OF_MONTH) && today.get(Calendar.MONTH)==birthday.get(Calendar.MONTH)){ //Если день рождения сегодня
+        if(today.get(Calendar.DAY_OF_MONTH)==birthday.get(Calendar.DAY_OF_MONTH) && today.get(Calendar.MONTH)==birthday.get(Calendar.MONTH)){ //Р•СЃР»Рё РґРµРЅСЊ СЂРѕР¶РґРµРЅРёСЏ СЃРµРіРѕРґРЅСЏ
             one+=5;
             two+=5;
         }
@@ -65,11 +65,11 @@ public class Task7 {
 }
 /*
 Task7
-Вы едете слишком быстро, и полицейский останавливает вас. Напишите код для вычисления результата,
-закодированный как значение типа int: 0 = нет штрафа, 1 = маленький штраф, 2 = большой штраф.
-Если скорость равна 60 или меньше, результат равен 0. Если скорость находится между 61 и 80 включительно, результат равен 1.
-Если скорость равна 81 или больше, результат равен 2. Если это не ваш день рождения - в этот день ваш Скорость может быть на 5 выше во всех случаях.
-Текущая дата задается рандомно, дата рождения вводится с клавиатуры.
+Р’С‹ РµРґРµС‚Рµ СЃР»РёС€РєРѕРј Р±С‹СЃС‚СЂРѕ, Рё РїРѕР»РёС†РµР№СЃРєРёР№ РѕСЃС‚Р°РЅР°РІР»РёРІР°РµС‚ РІР°СЃ. РќР°РїРёС€РёС‚Рµ РєРѕРґ РґР»СЏ РІС‹С‡РёСЃР»РµРЅРёСЏ СЂРµР·СѓР»СЊС‚Р°С‚Р°,
+Р·Р°РєРѕРґРёСЂРѕРІР°РЅРЅС‹Р№ РєР°Рє Р·РЅР°С‡РµРЅРёРµ С‚РёРїР° int: 0 = РЅРµС‚ С€С‚СЂР°С„Р°, 1 = РјР°Р»РµРЅСЊРєРёР№ С€С‚СЂР°С„, 2 = Р±РѕР»СЊС€РѕР№ С€С‚СЂР°С„.
+Р•СЃР»Рё СЃРєРѕСЂРѕСЃС‚СЊ СЂР°РІРЅР° 60 РёР»Рё РјРµРЅСЊС€Рµ, СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°РІРµРЅ 0. Р•СЃР»Рё СЃРєРѕСЂРѕСЃС‚СЊ РЅР°С…РѕРґРёС‚СЃСЏ РјРµР¶РґСѓ 61 Рё 80 РІРєР»СЋС‡РёС‚РµР»СЊРЅРѕ, СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°РІРµРЅ 1.
+Р•СЃР»Рё СЃРєРѕСЂРѕСЃС‚СЊ СЂР°РІРЅР° 81 РёР»Рё Р±РѕР»СЊС€Рµ, СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°РІРµРЅ 2. Р•СЃР»Рё СЌС‚Рѕ РЅРµ РІР°С€ РґРµРЅСЊ СЂРѕР¶РґРµРЅРёСЏ - РІ СЌС‚РѕС‚ РґРµРЅСЊ РІР°С€ РЎРєРѕСЂРѕСЃС‚СЊ РјРѕР¶РµС‚ Р±С‹С‚СЊ РЅР° 5 РІС‹С€Рµ РІРѕ РІСЃРµС… СЃР»СѓС‡Р°СЏС….
+РўРµРєСѓС‰Р°СЏ РґР°С‚Р° Р·Р°РґР°РµС‚СЃСЏ СЂР°РЅРґРѕРјРЅРѕ, РґР°С‚Р° СЂРѕР¶РґРµРЅРёСЏ РІРІРѕРґРёС‚СЃСЏ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹.
 
 //
  */

@@ -5,8 +5,8 @@ import java.util.*;
 public class Task3 {
 
     public static void method(String string){
-        List<String> list = Arrays.asList(string.split("\\s+"));//разделение строки по пробельным символам (1 или больше)
-        list.sort(new Comparator<String>() {//сортировка списка по длине строк
+        List<String> list = Arrays.asList(string.split("\\s+"));//СЂР°Р·РґРµР»РµРЅРёРµ СЃС‚СЂРѕРєРё РїРѕ РїСЂРѕР±РµР»СЊРЅС‹Рј СЃРёРјРІРѕР»Р°Рј (1 РёР»Рё Р±РѕР»СЊС€Рµ)
+        list.sort(new Comparator<String>() {//СЃРѕСЂС‚РёСЂРѕРІРєР° СЃРїРёСЃРєР° РїРѕ РґР»РёРЅРµ СЃС‚СЂРѕРє
             @Override
             public int compare(String o1, String o2) {
                 return o2.length() - o1.length();
@@ -24,7 +24,7 @@ public class Task3 {
 }
 /*
 Task3
-Строка состоит из слов, разделенных одним или несколькими пробелами. Переставьте слова по убыванию их длин.
+РЎС‚СЂРѕРєР° СЃРѕСЃС‚РѕРёС‚ РёР· СЃР»РѕРІ, СЂР°Р·РґРµР»РµРЅРЅС‹С… РѕРґРЅРёРј РёР»Рё РЅРµСЃРєРѕР»СЊРєРёРјРё РїСЂРѕР±РµР»Р°РјРё. РџРµСЂРµСЃС‚Р°РІСЊС‚Рµ СЃР»РѕРІР° РїРѕ СѓР±С‹РІР°РЅРёСЋ РёС… РґР»РёРЅ.
 
 //
  */

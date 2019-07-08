@@ -9,9 +9,9 @@ public class Task1 {
 
     public static void method() throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Введите первое слово: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ СЃР»РѕРІРѕ: ");
         String word1 = reader.readLine();
-        System.out.println("Введите второе слово: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ СЃР»РѕРІРѕ: ");
         String word2 = reader.readLine();
         reader.close();
         HashSet<Character> res = new HashSet<>();
@@ -20,7 +20,7 @@ public class Task1 {
                 if(x == y) res.add(x);
             }
         }
-        System.out.println("Символы, которые встречаются в обоих словах: " + res);
+        System.out.println("РЎРёРјРІРѕР»С‹, РєРѕС‚РѕСЂС‹Рµ РІСЃС‚СЂРµС‡Р°СЋС‚СЃСЏ РІ РѕР±РѕРёС… СЃР»РѕРІР°С…: " + res);
     }
 
     public static void main(String[] args) {
@@ -32,8 +32,8 @@ public class Task1 {
 }
 /*
 * Task1
-Даны два слова. Найдите только те символы слов, которые встречаются в обоих словах только один раз.
-Слова вводятся пользователем.
+Р”Р°РЅС‹ РґРІР° СЃР»РѕРІР°. РќР°Р№РґРёС‚Рµ С‚РѕР»СЊРєРѕ С‚Рµ СЃРёРјРІРѕР»С‹ СЃР»РѕРІ, РєРѕС‚РѕСЂС‹Рµ РІСЃС‚СЂРµС‡Р°СЋС‚СЃСЏ РІ РѕР±РѕРёС… СЃР»РѕРІР°С… С‚РѕР»СЊРєРѕ РѕРґРёРЅ СЂР°Р·.
+РЎР»РѕРІР° РІРІРѕРґСЏС‚СЃСЏ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј.
 
 //
 * */

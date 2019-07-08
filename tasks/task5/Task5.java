@@ -9,10 +9,10 @@ public class Task5 {
 
     public static void method()throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        System.out.println("Размер массива: ");
+        System.out.println("Р Р°Р·РјРµСЂ РјР°СЃСЃРёРІР°: ");
         int n = Integer.parseInt(reader.readLine());
         double[] arr = new double[n];
-        System.out.println("Заполнение массива");
+        System.out.println("Р—Р°РїРѕР»РЅРµРЅРёРµ РјР°СЃСЃРёРІР°");
         for(int i = 0; i < n; i++){
             arr[i] = Double.parseDouble(reader.readLine());
         }
@@ -24,7 +24,7 @@ public class Task5 {
             for(int i2 = j; i2<n; i2++) sum2+=arr[i2];
 
             if(sum1 == sum2){
-                System.out.println("Сумма = " + sum1);
+                System.out.println("РЎСѓРјРјР° = " + sum1);
                 for(int i = 0; i<j; i++) System.out.print(arr[i] + " ");
                 System.out.println();
                 for(int i = j; i<n; i++) System.out.print(arr[i] + " ");
@@ -46,9 +46,9 @@ public class Task5 {
 }
 /*
 Task5
-Пользователем задается массив чисел и его размерность, если есть место для разбиения массива так,
-чтобы сумма чисел на одной стороне была равна сумме чисел на другой стороне вывести на экран 2 массива
-(каждый из них одна половина изначального массива) и суммы чисел итоговых массивов.
+РџРѕР»СЊР·РѕРІР°С‚РµР»РµРј Р·Р°РґР°РµС‚СЃСЏ РјР°СЃСЃРёРІ С‡РёСЃРµР» Рё РµРіРѕ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ, РµСЃР»Рё РµСЃС‚СЊ РјРµСЃС‚Рѕ РґР»СЏ СЂР°Р·Р±РёРµРЅРёСЏ РјР°СЃСЃРёРІР° С‚Р°Рє,
+С‡С‚РѕР±С‹ СЃСѓРјРјР° С‡РёСЃРµР» РЅР° РѕРґРЅРѕР№ СЃС‚РѕСЂРѕРЅРµ Р±С‹Р»Р° СЂР°РІРЅР° СЃСѓРјРјРµ С‡РёСЃРµР» РЅР° РґСЂСѓРіРѕР№ СЃС‚РѕСЂРѕРЅРµ РІС‹РІРµСЃС‚Рё РЅР° СЌРєСЂР°РЅ 2 РјР°СЃСЃРёРІР°
+(РєР°Р¶РґС‹Р№ РёР· РЅРёС… РѕРґРЅР° РїРѕР»РѕРІРёРЅР° РёР·РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РјР°СЃСЃРёРІР°) Рё СЃСѓРјРјС‹ С‡РёСЃРµР» РёС‚РѕРіРѕРІС‹С… РјР°СЃСЃРёРІРѕРІ.
 
 //
  */
